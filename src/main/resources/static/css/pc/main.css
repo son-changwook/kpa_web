@@ -39,7 +39,7 @@ ul, ol {
     align-items: center;
     justify-content: space-between;
     position: relative;
-    padding: 0 40px;
+    padding: 0 150px;
 }
 
 .logo-area {
@@ -280,7 +280,7 @@ ul, ol {
     align-items: center;
     justify-content: space-between;
     position: relative;
-    margin-bottom: 0;
+    margin-bottom: 20px;
     padding-right: 180px;
 }
 .sponsor-arrows {
@@ -436,7 +436,7 @@ ul, ol {
     align-items: flex-start;
     justify-content: space-between;
     width: 100%;
-    padding: 32px 0 0 0;
+    padding: 0 0 0 0;
 }
 .footer-logo-area {
     flex: 0 0 180px;
@@ -444,7 +444,7 @@ ul, ol {
     align-items: center;
     justify-content: flex-start;
     height: 48px;
-    margin-left: 32px;
+    margin-left: 130px;
 }
 .footer-logo {
     height: 48px;
@@ -465,7 +465,7 @@ ul, ol {
     flex-direction: row;
     align-items: center;
     gap: 8px;
-    margin-right: 32px;
+    margin-right: 0;
     margin-top: 6px;
 }
 .footer-link {
@@ -477,6 +477,8 @@ ul, ol {
     background: none;
     border: none;
     cursor: pointer;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 .footer-divider {
     width: 12px;
@@ -484,6 +486,8 @@ ul, ol {
     border: 1px solid #DEE5ED;
     transform: rotate(90deg);
     margin: 0 8px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 .footer-copyright {
     color: #496583;
@@ -491,9 +495,9 @@ ul, ol {
     line-height: 14px;
     font-weight: 400;
     text-align: right;
-    margin-top: 8px;
-    margin-right: 32px;
-    margin-bottom: 0;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    margin-right: 0;
 }
 .footer-links > b {
     color: #496583;
@@ -521,4 +525,51 @@ ul, ol {
         text-align: left;
         margin: 8px 16px 0 16px;
     }
-} 
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    margin-right: 130px;
+}
+@media (max-width: 768px) {
+    .footer-right {
+        align-items: flex-start;
+        margin: 0 130px 8px 130px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-row {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px 0 0 0;
+    }
+    .footer-logo-area, .footer-info, .footer-links {
+        margin: 0 16px 8px 16px;
+    }
+    .footer-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        margin-right: 0;
+        margin-top: 0;
+    }
+    .footer-copyright {
+        text-align: left;
+        margin: 0 0 8px 0;
+    }
+    .footer-link, .footer-divider {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .footer-divider {
+        display: none;
+    }
+    .footer-link {
+        display: block;
+        margin-bottom: 2px;
+    }
+}
