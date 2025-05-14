@@ -8,4 +8,4 @@ public class KpaWebApplication {
     public static void main(String[] args) {
         SpringApplication.run(KpaWebApplication.class, args);
     }
-} 
+}

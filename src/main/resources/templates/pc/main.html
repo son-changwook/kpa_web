@@ -7,7 +7,7 @@
     <link rel="stylesheet" th:href="@{/css/pc/main.css}">
 </head>
 <body>
-    <div th:replace="common/header :: header-content"></div>
+    <div th:replace="pc/layouts/header :: header-content"></div>
 
     <main class="main">
         <div class="main-container">
@@ -56,18 +56,6 @@
     <section class="sponsor-section">
         <div class="sponsor-title-wrap">
             <div class="sponsor-title">Sponsor</div>
-            <div class="sponsor-arrows">
-                <button class="arrow arrow-left" aria-label="이전">
-                    <svg width="32" height="32" viewBox="0 0 24 24">
-                        <polyline points="15 6 9 12 15 18" fill="none" stroke="#7C98B6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-                <button class="arrow arrow-right" aria-label="다음">
-                    <svg width="32" height="32" viewBox="0 0 24 24">
-                        <polyline points="9 6 15 12 9 18" fill="none" stroke="#7C98B6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-            </div>
         </div>
         <div class="sponsor-list">
             <div class="sponsor-item sponsor-bg1"></div>
@@ -77,9 +65,21 @@
             <div class="sponsor-item sponsor-bg1"></div>
             <div class="sponsor-item sponsor-bg2"></div>
         </div>
+        <div class="sponsor-arrows">
+            <button class="arrow arrow-left" aria-label="이전">
+                <svg width="32" height="32" viewBox="0 0 24 24">
+                    <polyline points="15 6 9 12 15 18" fill="none" stroke="#7C98B6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <button class="arrow arrow-right" aria-label="다음">
+                <svg width="32" height="32" viewBox="0 0 24 24">
+                    <polyline points="9 6 15 12 9 18" fill="none" stroke="#7C98B6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
     </section>
 
-    <div th:replace="common/footer :: footer-content"></div>
+    <div th:replace="pc/layouts/footer :: footer-content"></div>
 
     <script th:src="@{/js/pc/main.js}"></script>
 </body>

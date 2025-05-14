@@ -1,0 +1,308 @@
+body {
+    background: #EFF2F6;
+    margin: 0;
+    padding: 0;
+    font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+    color: #05272E;
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden; /* 가로 스크롤 방지 */
+}
+.mo-header, .mo-main, .mo-footer, .mo-sponsor-section {
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto;
+    box-sizing: border-box; /* 패딩 포함 크기 계산 */
+}
+.mo-header {
+    height: clamp(56px, 21vw, 80px); /* 피그마 top_m height 80px, viewport 고려하여 조정 */
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4vw;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #EAEAEA;
+}
+.mo-logo {
+    height: clamp(28px, 12vw, 48px); /* 피그마 CI height 48px, 헤더 높이 맞춰 조정 */
+}
+.mo-menu-btn {
+    background: none;
+    border: none;
+    padding: 2vw;
+    cursor: pointer;
+}
+.mo-menu-btn img {
+    width: clamp(20px, 6vw, 24px);
+    height: clamp(20px, 6vw, 24px);
+}
+.mo-main {
+    padding: clamp(12px, 4vw, 16px) 2vw; /* 좌우 여백 8px, 상하 여백 16px */
+    background: #EFF2F6;
+}
+
+.mo-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+.mo-card-content { /* 넓은 카드 내부 텍스트 영역 */
+    position: relative;
+    z-index: 2;
+}
+.mo-card-bg-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: auto;
+    max-height: 60%; /* 카드 높이에 따라 조절 */
+    width: auto;
+    max-width: 60%; /* 카드 너비에 따라 조절 */
+    z-index: 1;
+    opacity: 0.8; /* 은은하게 */
+}
+.mo-card--intro .mo-card-bg-img {
+    /* 의사회소개 카드 전용 배경 이미지 위치/크기 조정 가능 */
+    right: 5px;
+    bottom: 5px;
+    max-height: 80px;
+}
+.mo-card--conference .mo-card-bg-img {
+    /* 학술대회 카드 전용 배경 이미지 위치/크기 조정 가능 */
+    right: 5px;
+    bottom: 5px;
+    max-height: 100px;
+}
+.mo-card-icon {
+    width: clamp(28px, 10vw, 48px); /* 아이콘 크기 */
+    height: clamp(28px, 10vw, 48px);
+    margin-bottom: clamp(4px, 2vw, 8px);
+}
+.mo-card-title {
+    font-weight: 800; /* 피그마 800, 700으로 통일 */
+    font-size: clamp(16px, 5vw, 20px); /* 피그마 20px, 약간 작게 */
+    line-height: 1.2;
+    color: #05272E;
+    margin-bottom: clamp(2px, 1vw, 8px);
+}
+.mo-card-desc {
+    font-weight: 500;
+    font-size: clamp(12px, 4vw, 14px); /* 피그마 14px */
+    line-height: 1.3;
+    color: #496583;
+    word-break: keep-all; /* 줄바꿈 시 단어 유지 */
+}
+.mo-footer {
+    background: #F8F9FA; /* 푸터 배경색 변경 */
+    padding: clamp(16px, 6vw, 24px) 2vw;
+    text-align: center;
+    font-size: clamp(10px, 3vw, 13px);
+    color: #6C757D; /* 푸터 글자색 변경 */
+    line-height: 1.6;
+    max-width: 375px; /* 그리드와 동일하게 중앙 정렬 */
+    margin: 0 auto;
+}
+.mo-footer-logo {
+    height: clamp(24px, 8vw, 40px); /* 푸터 로고 크기 조정 */
+    margin-bottom: clamp(8px, 3vw, 16px);
+    opacity: 0.7;
+}
+.mo-footer-info b {
+    font-weight: 500;
+}
+.mo-footer-links {
+    margin: clamp(8px, 3vw, 16px) 0;
+}
+.mo-footer-links a {
+    color: #495057; /* 링크 색상 변경 */
+    text-decoration: none;
+    font-size: clamp(11px, 3vw, 12px);
+}
+.mo-footer-links .mo-footer-divider {
+    margin: 0 2vw;
+    color: #CED4DA;
+}
+.mo-footer-copyright {
+    font-size: clamp(9px, 2.5vw, 11px);
+    color: #ADB5BD;
+}
+/* 반응형: 매우 좁은 화면 (예: 320px 이하)에서는 1열로 */
+@media (max-width: 340px) {
+    .mo-card-grid {
+        grid-template-columns: 1fr; /* 1열로 변경 */
+    }
+    .mo-card {
+        min-height: 100px; /* 1열일 때 일반 카드 높이 조정 */
+    }
+    .mo-card-title {
+        font-size: 16px;
+    }
+    .mo-card-desc {
+        font-size: 12px;
+    }
+    .mo-header {
+        height: 56px;
+        padding: 0 12px;
+    }
+    .mo-logo {
+        height: 28px;
+    }
+    .mo-card--wide {
+        min-height: 140px;
+    }
+}
+/* 기존 미디어 쿼리들과 병합 또는 조정 */
+@media (max-width: 375px) {
+    .mo-card-grid {
+        grid-template-columns: 1fr;
+        max-width: 100vw;
+    }
+    .mo-card {
+        min-height: 100px; /* 1열일 때 일반 카드 높이 조정 */
+    }
+    .mo-card--wide {
+        grid-column: span 1;
+    }
+}
+
+/* Sponsor(스와이프 카드) 영역 */
+.mo-sponsor-section {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    padding: 0 2vw;
+    box-sizing: border-box;
+}
+.mo-sponsor-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: clamp(24px, 8vw, 40px);
+    margin-left: 20%;   
+    transform: translateX(-20%);
+    margin-bottom: clamp(8px, 3vw, 16px);
+}
+.mo-sponsor-title {
+    font-size: clamp(16px, 5vw, 20px);
+    font-weight: 700;
+    color: #243342;
+    margin-right: auto;
+}
+.mo-sponsor-arrow {
+    width: 48px;
+    height: 36px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mo-sponsor-arrow svg {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+.mo-sponsor-arrow--left svg polyline {
+    stroke: #7C98B6;
+}
+.mo-sponsor-arrow--right svg polyline {
+    stroke: #243342;
+}
+.mo-sponsor-arrow svg polyline {
+    stroke: #7C98B6;
+    transition: stroke 0.2s;
+}
+.mo-sponsor-arrow:hover svg polyline {
+    stroke: #243342;
+}
+.mo-sponsor-arrow--right {
+    margin-right: 16px;
+}
+.mo-sponsor-list {
+    display: flex;
+    gap: clamp(8px, 3vw, 16px);
+    overflow-x: auto;
+    padding-bottom: 2vw;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    box-sizing: border-box;
+
+     /* 스크롤바 숨기기 추가 */
+    scrollbar-width: none;         /* Firefox */
+    -ms-overflow-style: none;      /* IE, Edge */
+
+}
+.mo-sponsor-item {
+    flex: 0 0 94vw;
+    max-width: 352px;
+    min-width: 80vw;
+    height: clamp(72px, 25vw, 96px);
+    background: #DEE5ED;
+    border-radius: clamp(16px, 5vw, 24px);
+    box-shadow: 0 1px 6px rgba(52, 72, 94, 0.08);
+    scroll-snap-align: start;
+    position: relative;
+}
+@media (min-width: 400px) {
+    .mo-sponsor-item {
+        flex-basis: 352px;
+    }
+}
+
+/* 카드별 높이 지정 */
+.mo-card--conference {
+    background: #D6F0FF;
+}
+.mo-card--benefit {
+    background: #EAF6F0;
+}
+
+.mo-card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    align-items: start; /* 추가 */
+  }
+/* 카드 컬럼 그룹 스타일 추가 */
+.mo-card-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mo-card--wide {
+    grid-column: span 2;
+}
+/* 카드별 높이 지정 */
+.mo-card--intro,
+.mo-card--conference {
+  min-height: 180px;
+}
+.mo-card--youtube,
+.mo-card--notice {
+  min-height: 130px;
+}
+.mo-card--insurance,
+.mo-card--law {
+  min-height: 140px;
+}
+.mo-card--gallery,
+.mo-card--benefit {
+  min-height: 150px;
+}

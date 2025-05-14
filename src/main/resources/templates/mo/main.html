@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>KPA Web - Mobile Main</title>
+    <link rel="stylesheet" href="/css/mo/main.css">
+</head>
+<body>
+    <!-- 상단 헤더 -->
+    <div th:replace="mo/layouts/header :: mo-header-content"></div>
+    <!-- 메인 카드 영역 -->
+    <main class="mo-main">
+        <div class="mo-card-grid">
+            <!-- 왼쪽 세로 그룹: 의사회 소개, 유튜브채널명 -->
+            <div class="mo-card-col">
+                <div class="mo-card mo-card--intro">
+                    <div class="mo-card-content">
+                        <div class="mo-card-title">의사회 소개</div>
+                        <div class="mo-card-desc">의사회 소개의 서브타이틀입니다.</div>
+                        <img src="/images/mo_card_intro_bg.png" alt="의사회 소개 배경" class="mo-card-bg-img">
+                    </div>
+                </div>
+                <div class="mo-card mo-card--youtube">
+                    <div class="mo-card-title">유튜브채널명</div>
+                    <div class="mo-card-desc">KPA 유튜브채널입니다.</div>
+                    <img src="/images/icon_youtube.svg" alt="유튜브 아이콘" class="mo-card-icon">
+                </div>
+            </div>
+            <!-- 오른쪽 세로 그룹: 공지사항, 학술대회 -->
+            <div class="mo-card-col">
+                <div class="mo-card mo-card--notice">
+                    <div class="mo-card-title">공지사항</div>
+                    <div class="mo-card-desc">서브타이틀입니다.</div>
+                    <img src="/images/icon_notice.svg" alt="공지 아이콘" class="mo-card-icon">
+                </div>
+                <div class="mo-card mo-card--conference">
+                    <div class="mo-card-content">
+                        <div class="mo-card-title">학술대회</div>
+                        <div class="mo-card-desc">서브타이틀입니다.</div>
+                        <img src="/images/mo_card_conference_bg.png" alt="학술대회 배경" class="mo-card-bg-img">
+                    </div>
+                </div>
+            </div>
+            <!-- 이하 기존 카드들 -->
+            <div class="mo-card mo-card--insurance">
+                <img src="/images/icon_insurance.svg" alt="보험 아이콘" class="mo-card-icon">
+                <div class="mo-card-title">보험 이슈</div>
+                <div class="mo-card-desc">보험소개 서브타이틀입니다.</div>
+            </div>
+            <div class="mo-card mo-card--law">
+                <img src="/images/icon_law.svg" alt="법률 아이콘" class="mo-card-icon">
+                <div class="mo-card-title">법률상담</div>
+                <div class="mo-card-desc">법률상담 소개 서브타이틀입니다.</div>
+            </div>
+            <div class="mo-card mo-card--gallery mo-card--wide">
+                <img src="/images/icon_gallery.svg" alt="갤러리 아이콘" class="mo-card-icon">
+                <div class="mo-card-title">동영상/포토 갤러리</div>
+                <div class="mo-card-desc">서브타이틀입니다.</div>
+            </div>
+            <div class="mo-card mo-card--benefit mo-card--wide">
+                <div class="mo-card-content">
+                    <img src="/images/mo_card_benefit_bg.png" alt="정회원 혜택 배경" class="mo-card-bg-img">
+                    <div class="mo-card-title">정회원 혜택</div>
+                    <div class="mo-card-desc">정회원 혜택 서브타이틀 표기영역입니다.<br>정회원 가입으로 다양한 혜택을 만나보세요.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sponsor 영역: 카드 그리드 아래, 푸터 위에 위치 -->
+        <div class="mo-sponsor-section">
+            <div class="mo-sponsor-header">
+                <span class="mo-sponsor-title">Sponsor</span>
+                <button class="mo-sponsor-arrow mo-sponsor-arrow--left" aria-label="이전">
+                    <svg width="32" height="32" viewBox="0 0 24 24">
+                        <polyline points="15 6 9 12 15 18" fill="none" stroke="#7C98B6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="mo-sponsor-arrow mo-sponsor-arrow--right" aria-label="다음">
+                    <svg width="32" height="32" viewBox="0 0 24 24">
+                        <polyline points="9 6 15 12 9 18" fill="none" stroke="#7C98B6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="mo-sponsor-list">
+                <div class="mo-sponsor-item"></div>
+                <div class="mo-sponsor-item"></div>
+                <div class="mo-sponsor-item"></div>
+            </div>
+        </div>
+    </main>
+    <!-- 푸터 -->
+    <div th:replace="mo/layouts/footer :: mo-footer-content"></div>
+    <script src="/js/mo/main.js"></script>
+</body>
+</html> 
