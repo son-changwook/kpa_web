@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPA Web - Main</title>
+    <link rel="stylesheet" th:href="@{/css/pc/main.css}">
+</head>
+<body>
+    <div th:replace="common/header :: header-content"></div>
+
+    <main class="main">
+        <div class="main-container">
+            <div class="main-card card-top">
+                <div class="card-title">의사회 소개</div>
+                <div class="card-desc">의사회 소개의 서브타이틀입니다.</div>
+                <div class="card-icon"><img src="/images/card1.png" alt="의사회 소개"></div>
+            </div>
+            <div class="main-card card-top">
+                <div class="card-title">공지사항</div>
+                <div class="card-desc">서브타이틀입니다.</div>
+                <div class="card-icon"><img src="/images/card2.png" alt="공지사항"></div>
+            </div>
+            <div class="main-card card-blue card-top">
+                <div class="card-title">학술대회</div>
+                <div class="card-desc">서브타이틀입니다.</div>
+                <div class="card-icon"><img src="/images/card3.png" alt="학술대회"></div>
+            </div>
+            <div class="main-card card-top">
+                <div class="card-title">유튜브채널명</div>
+                <div class="card-desc">KPA 유튜브채널입니다.</div>
+                <div class="card-icon"><img src="/images/card4.png" alt="유튜브채널명"></div>
+            </div>
+            <div class="main-card only-bottom">
+                <div class="card-title">보험 이슈</div>
+                <div class="card-desc">보험 소개 서브타이틀입니다.</div>
+                <div class="card-icon"><img src="/images/card5.png" alt="보험 이슈"></div>
+            </div>
+            <div class="main-card only-bottom">
+                <div class="card-title">동영상/포토 갤러리</div>
+                <div class="card-desc">서브타이틀입니다.</div>
+                <div class="card-icon"><img src="/images/card6.png" alt="동영상/포토 갤러리"></div>
+            </div>
+            <div class="main-card only-bottom">
+                <div class="card-title">법률상담</div>
+                <div class="card-desc">법률상담 소개 서브타이틀입니다.</div>
+                <div class="card-icon"><img src="/images/card7.png" alt="법률상담"></div>
+            </div>
+            <div class="main-card card-blue only-bottom">
+                <div class="card-title">정회원 혜택</div>
+                <div class="card-desc">정회원 혜택 서브타이틀 표기영역입니다.<br>정회원 가입으로 다양한 혜택을 만나보세요.</div>
+                <div class="card-icon"><img src="/images/card8.png" alt="정회원 혜택"></div>
+            </div>
+        </div>
+    </main>
+    <section class="sponsor-section">
+        <div class="sponsor-title-wrap">
+            <div class="sponsor-title">Sponsorㄴ</div>
+            <div class="sponsor-arrows">
+                <button class="arrow arrow-left" aria-label="이전">
+                    <svg width="32" height="32" viewBox="0 0 24 24">
+                        <polyline points="15 6 9 12 15 18" fill="none" stroke="#7C98B6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="arrow arrow-right" aria-label="다음">
+                    <svg width="32" height="32" viewBox="0 0 24 24">
+                        <polyline points="9 6 15 12 9 18" fill="none" stroke="#7C98B6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="sponsor-list">
+            <div class="sponsor-item sponsor-bg1"></div>
+            <div class="sponsor-item sponsor-bg2"></div>
+            <div class="sponsor-item sponsor-bg1"></div>
+            <div class="sponsor-item sponsor-bg2"></div>
+            <div class="sponsor-item sponsor-bg1"></div>
+            <div class="sponsor-item sponsor-bg2"></div>
+        </div>
+    </section>
+
+    <div th:replace="common/footer :: footer-content"></div>
+
+    <script th:src="@{/js/pc/main.js}"></script>
+</body>
+</html> 

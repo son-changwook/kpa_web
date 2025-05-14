@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="header">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPA Web - Main</title>
+    <link rel="stylesheet" th:href="@{/css/pc/main.css}">
+</head>
+<body>
+    <header class="header" th:fragment="header-content">
+        <div class="header-inner">
+            <div class="logo-area">
+                <img src="/images/logo.png" alt="대한재활의학과의사회 로고" class="logo-img">
+            </div>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">재활의학과의사회</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">학술대회 등록</a></li>
+                    <li><a href="#">학술대회 자료</a></li>
+                    <li><a href="#">회원공간</a></li>
+                </ul>
+            </nav>
+            <div class="util-menu">
+                <a href="#" class="underline-hover">Log in</a>
+                <a href="#" class="underline-hover">Join</a>
+                <a href="#" class="underline-hover">Contact us</a>
+            </div>
+        </div>
+        <div class="header-line"></div>
+    </header>
+</body>
+</html> 
